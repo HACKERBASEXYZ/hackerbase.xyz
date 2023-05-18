@@ -1,9 +1,13 @@
-const Home = () => {
+import Image from "next/image";
+
+const home = () => {
   return (
     <div>
-      <h1 className="text-2xl text-center mt-10 text-red-200">Home</h1>
+      <div className="w-full bg-blue-300">
+        <Image alt="hackers" src={"/hackers.jpeg"} width={500} height={100} />
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default home;
