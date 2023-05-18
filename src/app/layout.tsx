@@ -1,4 +1,6 @@
+import Navbar from "@/components/Navbar";
 import "../styles/globals.css";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "HACKERBASE",
@@ -8,7 +10,11 @@ export const metadata = {
 const rootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 };
