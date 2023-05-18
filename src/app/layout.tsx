@@ -7,11 +7,7 @@ export const metadata = {
   description: "Web3 decentralised event platform",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const rootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <body>
@@ -21,4 +17,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default rootLayout;
