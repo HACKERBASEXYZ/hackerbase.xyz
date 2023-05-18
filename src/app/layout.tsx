@@ -1,4 +1,6 @@
+import Navbar from "@/components/Navbar";
 import "../styles/globals.css";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "HACKERBASE",
@@ -12,7 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
