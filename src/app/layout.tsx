@@ -11,7 +11,7 @@ const rootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <body>
-        <div className="bg-red-200 flex flex-col">
+        <div className="flex flex-col">
           <Navbar />
           {children}
           {/* <Footer /> */}

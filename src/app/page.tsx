@@ -1,9 +1,17 @@
-const Home = () => {
+import FeaturedEvents from "@/components/FeaturedEvents";
+import Image from "next/image";
+
+const home = () => {
   return (
     <div>
-      <h1 className="text-2xl text-center mt-10 text-red-200">Home</h1>
+      <div className="h-96 w-full bg-blue-300 relative header">
+        <Image alt="hackers" src={"/bg.jpg"} fill />
+      </div>
+      <div className="p-4">
+        <FeaturedEvents />
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default home;
