@@ -1,8 +1,11 @@
 import EventCard from "@/components/EventCard";
-import { events } from "@/types/data";
+import { Event } from "@/types/event";
+import { getEvents } from "@/utils/getEvents";
 import Image from "next/image";
 
-const eventsPage = () => {
+const eventsPage = async () => {
+  const events: Event[] = await getEvents();
+
   return (
     <div>
       <div className="relative eventsHeader">

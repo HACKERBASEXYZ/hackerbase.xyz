@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="flex flex-row items-center bg-white w-full p-4 z-10 fixed shadow-lg">
+    <div className="flex flex-row items-center bg-white w-full p-4 shadow-lg">
       <div className="flex flex-row items-center gap-8">
         <Link href={"/"}>
           <h1 className="text-2xl">HACKERBASE</h1>

@@ -1,8 +1,11 @@
 import EventCard from "@/components/EventCard";
-import { featuredEvents } from "@/types/data";
+import { Event } from "@/types/event";
+import { getFeaturedEvents } from "@/utils/getFeaturedEvents";
 import Image from "next/image";
 
-const home = () => {
+const home = async () => {
+  const featuredEvents: Event[] = await getFeaturedEvents();
+
   return (
     <div>
       <div className="h-96 w-full bg-blue-300 relative landingHeader">
