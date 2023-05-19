@@ -1,5 +1,3 @@
-const createEvent = () => {
-  return <div>CreateEvent</div>;
-};
-
-export default createEvent;
+export default function createEvent() {
+  return <div>Create event</div>;
+}
