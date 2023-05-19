@@ -7,6 +7,7 @@ export enum EventType {
 }
 
 export type Event = {
+    id: string,
 	title: string,
 	subtitle: string,
 	description: string,
