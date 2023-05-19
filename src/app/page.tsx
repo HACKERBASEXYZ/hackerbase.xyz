@@ -3,8 +3,8 @@ import Image from "next/image";
 const home = () => {
   return (
     <div>
-      <div className="w-full bg-blue-300">
-        <Image alt="hackers" src={"/hackers.jpeg"} width={500} height={100} />
+      <div className="h-96 w-full bg-blue-300 relative header">
+        <Image alt="hackers" src={"/bg.jpg"} fill />
       </div>
     </div>
   );
