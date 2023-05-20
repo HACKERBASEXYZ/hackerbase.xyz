@@ -3,7 +3,7 @@ import { Event } from "@/types/event";
 import { getFeaturedEvents } from "@/utils/getFeaturedEvents";
 import Image from "next/image";
 
-const home = async () => {
+const homePage = async () => {
   const featuredEvents: Event[] = await getFeaturedEvents();
 
   return (
@@ -23,4 +23,4 @@ const home = async () => {
   );
 };
 
-export default home;
+export default homePage;
