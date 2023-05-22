@@ -1,8 +1,8 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LoginModal from "./LoginModal";
 import { useSupabase } from "@/context/UserAuthenticationContext";
 
@@ -10,10 +10,15 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const router = useRouter();
+  const pathName = usePathname();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const { session } = useSupabase();
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathName]);
 
   return (
     <div
