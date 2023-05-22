@@ -1,8 +1,8 @@
-import { FormData } from "@/app/events/create/page";
 import { Formik, Form } from "formik";
 import FormField from "../formUtils/FormField";
 import NavigationButtons from "../formUtils/NavigationButtons";
 import * as Yup from "yup";
+import { FormData } from "@/types/event";
 
 interface DetailsFormProps {
   formData: FormData;
@@ -26,7 +26,7 @@ const DetailsForm: React.FC<DetailsFormProps> = ({ formData, next, prev }) => {
       validationSchema={DetailsFormValidationSchema}
     >
       {({ values }) => (
-        <Form className="flex flex-col w-1/3 self-center">
+        <Form className="flex flex-col">
           <FormField name="email" label="Email" />
           <FormField name="password" label="Password" />
           <NavigationButtons values={values} prev={prev} />
