@@ -24,7 +24,7 @@ const Navbar = () => {
     <div
       className={`${
         menuOpen ? "fixed" : "flex"
-      } w-full h-[90px] p-4 shadow-lg bg-white z-50`}
+      } w-full h-[90px] p-4 border-b border-gray-200 bg-white z-50`}
     >
       <div className="flex justify-between items-center h-full w-full">
         <div className="flex flex-row items-center gap-8">
@@ -54,10 +54,7 @@ const Navbar = () => {
               My Profile
             </h1>
           ) : (
-            <h1
-              className="cursor-pointer"
-              onClick={() => setIsModalOpen(true)}
-            >
+            <h1 className="cursor-pointer" onClick={() => setIsModalOpen(true)}>
               Login
             </h1>
           )}
@@ -69,10 +66,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <LoginModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
+      <LoginModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       {menuOpen && (
         <div className="md:hidden border-t border-black fixed top-[90px] left-0 w-full h-[calc(100vh-90px)] bg-white z-50 text-black flex flex-col p-8 overflow-auto items-center gap-5">
           <Link href="/events">Events</Link>
@@ -84,10 +78,7 @@ const Navbar = () => {
               My Profile
             </h1>
           ) : (
-            <h1
-              className="cursor-pointer"
-              onClick={() => setIsModalOpen(true)}
-            >
+            <h1 className="cursor-pointer" onClick={() => setIsModalOpen(true)}>
               Login
             </h1>
           )}

@@ -19,6 +19,17 @@ export type Event = {
   location: string;
   requested_funding: number;
   received_funding: number;
-  start_date: string;
-  end_date: string; // (!!! timezones)
+  startDate: string;
+  endDate: string; 
 };
+
+export type FormData = {
+  title: string,
+	subtitle: string,
+	image: string,
+	country: string,
+	city: string,
+	address: string,
+	startDate: string, 
+	endDate: string, 
+}

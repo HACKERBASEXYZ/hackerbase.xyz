@@ -1,21 +1,20 @@
 "use client";
+import Steps from "@/components/formUtils/Steps";
 import BasicInfoForm from "@/components/forms/BasicInfoForm";
 import DetailsForm from "@/components/forms/DetailsForm";
+import { FormData } from "@/types/event";
 import { useState } from "react";
-
-export type FormData = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-};
 
 const CreateEventPage = () => {
   const [formData, setFormData] = useState<FormData>({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
+    title: "",
+    subtitle: "",
+    image: "",
+    address: "",
+    city: "",
+    country: "",
+    startDate: "",
+    endDate: "",
   });
   const [currentStep, setCurrentStep] = useState(0);
 
@@ -51,9 +50,10 @@ const CreateEventPage = () => {
 
   return (
     <div className="flex flex-col">
-      <h1>Create Event</h1>
-      <h2>This is the page that we use to create your new event</h2>
-      {forms[currentStep]}
+      <Steps currentStep={currentStep} />
+      <div className="w-full lg:w-1/2 self-center mt-10 px-4">
+        {forms[currentStep]}
+      </div>
     </div>
   );
 };
