@@ -82,7 +82,9 @@ const LoginModal = ({ isOpen, onClose }: ModalProps) => {
     }
 
     setIsLoading(false);
-    router.push("/");
+    router.refresh();
+    onClose();
+    console.log("AQ");
   };
 
   const handleClickSignup = async () => {

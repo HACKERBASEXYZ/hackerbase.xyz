@@ -3,7 +3,7 @@ import EventCard from "@/components/EventCard";
 import { Event } from "@/types/event";
 import { getFeaturedEvents } from "@/utils/getFeaturedEvents";
 
-const homePage = async () => {
+const HomePage = async () => {
   const featuredEvents: Event[] = await getFeaturedEvents();
 
   return (
@@ -23,4 +23,4 @@ const homePage = async () => {
   );
 };
 
-export default homePage;
+export default HomePage;

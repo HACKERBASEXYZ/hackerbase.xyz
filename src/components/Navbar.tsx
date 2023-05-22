@@ -49,7 +49,7 @@ const Navbar = () => {
           {session ? (
             <h1
               className="cursor-pointer"
-              onClick={() => router.push("/myprofile")}
+              onClick={() => router.push("/profile")}
             >
               My Profile
             </h1>
@@ -79,7 +79,7 @@ const Navbar = () => {
           {session ? (
             <h1
               className="cursor-pointer"
-              onClick={() => router.push("/myprofile")}
+              onClick={() => router.push("/profile")}
             >
               My Profile
             </h1>
