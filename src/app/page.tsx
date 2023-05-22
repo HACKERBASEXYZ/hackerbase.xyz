@@ -1,7 +1,7 @@
+import Image from "next/image";
 import EventCard from "@/components/EventCard";
 import { Event } from "@/types/event";
 import { getFeaturedEvents } from "@/utils/getFeaturedEvents";
-import Image from "next/image";
 
 const homePage = async () => {
   const featuredEvents: Event[] = await getFeaturedEvents();
