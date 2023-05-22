@@ -1,7 +1,8 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
-import { FaUserAlt } from "react-icons/fa";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { FaSignOutAlt, FaUserAlt } from "react-icons/fa";
 import { useQuery } from "@tanstack/react-query";
 import { ToastContainer, toast } from "react-toastify";
 
@@ -12,7 +13,8 @@ import { getUsers, updateUser } from "@/utils/supabaseUsers";
 import { useSupabase } from "@/context/UserAuthenticationContext";
 
 const ProfilePage = () => {
-  const { session } = useSupabase();
+  const router = useRouter();
+  const { session, supabase } = useSupabase();
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -77,8 +79,13 @@ const ProfilePage = () => {
     });
   };
 
+  const handleClickSignout = async () => {
+    await supabase.auth.signOut();
+    router.push("/");
+  };
+
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen py-10 gap-10">
+    <div className="flex flex-col relative justify-center items-center min-h-screen py-10 gap-10">
       <ToastContainer
         position="top-center"
         autoClose={2000}
@@ -91,6 +98,12 @@ const ProfilePage = () => {
         pauseOnHover
         theme="light"
       />
+      <div
+        className="absolute top-10 right-10 cursor-pointer"
+        onClick={() => handleClickSignout()}
+      >
+        <FaSignOutAlt size={30} color="black" />
+      </div>
       <div className="flex flex-col items-center gap-5">
         <div className="rounded-full flex items-center justify-center w-[80px] h-[80px]">
           <FaUserAlt size={50} color="black" />
