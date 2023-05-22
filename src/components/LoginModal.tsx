@@ -117,10 +117,12 @@ const LoginModal = ({ isOpen, onClose }: ModalProps) => {
     }
 
     const addUser = await supabase.from("users").insert({
-      ...formSignup,
+      email: formSignup.email,
+      lastName: formSignup.lastName,
+      firstName: formSignup.firstName,
     });
 
-    if (addUser.status !== 200) {
+    if (addUser.error) {
       setIsLoading(false);
       return setErrors({
         ...errors,
