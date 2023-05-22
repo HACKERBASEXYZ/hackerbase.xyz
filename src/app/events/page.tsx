@@ -8,12 +8,12 @@ const eventsPage = async () => {
 
   return (
     <div>
-      <div className="relative eventsHeader">
+      {/* <div className="relative eventsHeader">
         <Image alt="Events image" src="/water.jpg" fill />
         <h1 className="text-white text-4xl absolute left-1/2 top-2/3 -translate-x-1/2 -translate-y-2/3">
           Events
         </h1>
-      </div>
+      </div> */}
       <div className="px-10 md:px-20 lg:px-32 pt-4 flex flex-col md:flex-row w-full">
         <div className="w-1/4">
           <h1>Filter</h1>
