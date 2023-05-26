@@ -51,7 +51,7 @@ const Navbar = () => {
               className="cursor-pointer"
               onClick={() => router.push("/profile")}
             >
-              My Profile
+              Profile
             </h1>
           ) : (
             <h1 className="cursor-pointer" onClick={() => setIsModalOpen(true)}>
@@ -75,7 +75,7 @@ const Navbar = () => {
               className="cursor-pointer"
               onClick={() => router.push("/profile")}
             >
-              My Profile
+              Profile
             </h1>
           ) : (
             <h1 className="cursor-pointer" onClick={() => setIsModalOpen(true)}>

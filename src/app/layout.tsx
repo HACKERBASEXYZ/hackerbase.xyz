@@ -5,7 +5,7 @@ import { headers, cookies } from "next/headers";
 
 import SupabaseProvider from "@/context/UserAuthenticationContext";
 import { createServerComponentSupabaseClient } from "@supabase/auth-helpers-nextjs";
-// import Footer from "@/components/Footer";
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Providers from "@/utils/reactQueryProvider";
 
@@ -14,11 +14,7 @@ export const metadata = {
   description: "Web3 decentralised event platform",
 };
 
-const rootLayout = async ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
+const rootLayout = async ({ children }: { children: React.ReactNode }) => {
   const supabase = createServerComponentSupabaseClient({
     headers,
     cookies,
@@ -36,7 +32,7 @@ const rootLayout = async ({
             <Providers>
               <Navbar />
               {children}
-              {/* <Footer /> */}
+              <Footer />
             </Providers>
           </SupabaseProvider>
         </div>

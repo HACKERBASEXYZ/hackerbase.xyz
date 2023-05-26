@@ -2,6 +2,9 @@
 import Steps from "@/components/formUtils/Steps";
 import BasicInfoForm from "@/components/forms/BasicInfoForm";
 import DetailsForm from "@/components/forms/DetailsForm";
+import FundingForm from "@/components/forms/FundingForm";
+import PreviewForm from "@/components/forms/PreviewForm";
+import TicketingForm from "@/components/forms/TicketingForm";
 import { FormData } from "@/types/event";
 import { useState } from "react";
 
@@ -46,6 +49,19 @@ const CreateEventPage = () => {
       next={handleNextStep}
       prev={handlePreviousStep}
     />,
+    <FundingForm
+      key={2}
+      formData={formData}
+      next={handleNextStep}
+      prev={handlePreviousStep}
+    />,
+    <TicketingForm
+      key={3}
+      formData={formData}
+      next={handleNextStep}
+      prev={handlePreviousStep}
+    />,
+    <PreviewForm key={4} />,
   ];
 
   return (

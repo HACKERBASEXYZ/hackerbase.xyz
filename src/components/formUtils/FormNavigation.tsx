@@ -1,4 +1,4 @@
-import { FormData } from "@/app/events/create/page";
+import { FormData } from "@/types/event";
 
 interface NavigationButtonsProps {
   values: FormData;
